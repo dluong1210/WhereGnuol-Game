@@ -25,7 +25,10 @@
     + include: *C:/SDL2/include* 
     + lib: *C:/SDL2/lib*
 
-- Tải game về dưới dạng file zip hoặc dùng lệnh *git clone https://github.com/dluong1210/GameSDL_WheresGnuol.git*.
+- Tải game về dưới dạng file zip hoặc dùng lệnh sau 
+```
+    git clone https://github.com/dluong1210/GameSDL_WheresGnuol.git
+```
 
 - Cuối cùng, mở project ( giải nén file nếu cần ) và click vào file *Where'sGnuol.exe* để chạy Game ( quá trình này có thế mất 10-30 giây ).
 
