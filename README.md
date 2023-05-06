@@ -38,7 +38,7 @@
 
 ### *Câu chuyện*
 
-   *Nhân vật chính và Gnuol là 2 người bạn thân. Một ngày Gnuol bị một thế lực bí ẩn bắt, nhân vật chính của chúng ta quyết định tấn công vào lâu đài - nơi sào huyệt của thế lực kia để giải cứu người bạn của mình. Tại đây, anh ta sẽ đối mặt với nhiều thử thách và nguy hiểm khác nhau, bao gồm chạm trán với các kẻ thù cố gắng ngăn cản anh ta tìm kiếm Gnuol. Liệu nhân vật chính của ta có thành công ? Where's Gnuol !?.*
+-    *Nhân vật chính và Gnuol là 2 người bạn thân. Một ngày Gnuol bất ngờ bị một thế lực bí ẩn bắt cóc, nhân vật chính của chúng ta quyết định tấn công vào lâu đài - nơi sào huyệt của thế lực kia để giải cứu người bạn của mình. Tại đây, anh ta sẽ đối mặt với nhiều thử thách và nguy hiểm khác nhau, bao gồm chạm trán với các kẻ thù cố gắng ngăn cản anh ta tìm kiếm Gnuol. Liệu nhân vật chính của chúng ta có thành công ? Where's Gnuol !?.*
 
 ### *Luật chơi*
 
