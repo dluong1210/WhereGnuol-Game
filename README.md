@@ -25,7 +25,7 @@
     + include: *C:/SDL2/include* 
     + lib: *C:/SDL2/lib*
 
-- Tải game về dưới dạng file zip hoặc dùng lệnh sau 
+- Tải game về dưới dạng file zip hoặc dùng lệnh sau:
 ```
     git clone https://github.com/dluong1210/GameSDL_WheresGnuol.git
 ```
@@ -42,7 +42,13 @@
 
 ### *Luật chơi*
 
-- ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemyBlue.png)
+- Người chơi sẽ có HP = 3. Bạn phải cố gắng di chuyển xa và tiêu diệt được nhiều quái để đạt được điểm cao.
+
+- Có 4 loại quái trong game ( 3 con di chuyển trên mặt đất và 1 con bay ) cùng với các thuộc tính:
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy1.png) : HP=3, Speed=4, tiêu diệt giúp nhận thêm HP.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy2.png) : HP=5, Speed=4, tiêu diệt giúp nhận 10 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy3.png) : HP=2, Speed=5, tiêu diệt giúp nhận 5 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/eagle4.png) : HP=3, Speed=4, tiêu diệt giúp nhận 15 điểm.
 
 ### *Hướng dẫn chơi*
 
