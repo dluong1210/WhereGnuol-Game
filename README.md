@@ -19,7 +19,9 @@
 
 ### **Cách 1: Chạy qua Code::Block**
 
-- Nếu bạn có khả năng làm việc với Makefile hãy thay đổi đường dẫn include và lib sao cho phù hợp với thư viện SDL2 của bạn. Nếu không hãy để thư viện SDL2 ở ổ C: với đường dẫn như sau: include: *C:/SDL2/include* , lib: *C:/SDL2/lib*.
+- Nếu bạn có khả năng làm việc với Makefile hãy thay đổi đường dẫn include và lib sao cho phù hợp với thư viện SDL2 của bạn. Nếu không hãy để thư viện SDL2 ở ổ C: với đường dẫn như sau: 
+    +, include: *C:/SDL2/include* 
+    +, lib: *C:/SDL2/lib*
 
 - Cài đặt và liên kết các thư viện với Code::Block của bạn. 
 
