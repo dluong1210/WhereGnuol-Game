@@ -32,8 +32,6 @@
 
 - Cuối cùng, mở project ( giải nén file nếu cần ) và click vào file *Where'sGnuol.exe* để chạy Game ( quá trình này có thế mất 10-30 giây ).
 
-- Mọi góp ý hay lỗi trong quá trình cài đặt và chạy game, hãy liên hệ với tôi qua Email *luong8076@gmail.com*.
-
 ## **Mô tả Game**
 
 ### *Câu chuyện*
@@ -95,4 +93,38 @@
 - Đối với đối tượng quái bay *Eagle*:
     + Sử dụng thuật toán ngoài chương trình: *Tìm đường đi ngắn nhất A-Star ( Xử lý theo BFS )* để đuổi theo người chơi.
 
-- Clean code, xử lý tối ưu không xuất hiện tình trạng tràn Ram.
+- Clean code, xử lý tối ưu, Game hoạt động mượt mà không xuất hiện tình trạng tràn Ram.
+
+## **Preview**
+
+![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Preview/preview%20(2).png)
+
+![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Preview/preview%20(4).png)
+
+![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Preview/preview%20(1).png)
+
+![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Preview/preview%20(3).png)
+
+## **Tổng Kết**
+
+### *Tâm đắc*
+
+- Toàn bộ code là do em tự tham khảo và tìm hiểu để thực hiện.
+
+- Biết cách xây dựng thuật toán tìm đường đi ngắn và sử dụng Tile Map.
+
+- Học được cách quản lý file, sử dụng github, kỹ năng debug, ...
+
+### *Hạn chế*
+
+- Game vẫn chưa thật sự hấp dẫn.
+
+### *Hướng phát triển về sau*
+
+- Xây dựng thêm các đối tượng boss và item hỗ trợ trong game ...
+
+- Xây dựng chế độ đánh theo màn, có thể chọn độ khó cho game.
+
+- Phát triển thêm cho 2 người có thể cùng chơi với nhau.
+
+** Cảm ơn thầy và các bạn đã đọc và chơi game. Nếu có đóng góp hay tìm hiểu thêm thông tin hãy liên hệ qua Email: luong8076@gmail.com **
