@@ -45,10 +45,12 @@
 - Người chơi sẽ có HP = 3. Bạn phải cố gắng di chuyển xa và tiêu diệt được nhiều quái để đạt được điểm cao.
 
 - Có 4 loại quái trong game ( 3 con di chuyển trên mặt đất và 1 con bay ) cùng với các thuộc tính:
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy1.png) : HP=3, Speed=4, tiêu diệt giúp nhận thêm HP.
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy2.png) : HP=5, Speed=4, tiêu diệt giúp nhận 10 điểm.
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy3.png) : HP=2, Speed=5, tiêu diệt giúp nhận 5 điểm.
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/eagle4.png) : HP=3, Speed=4, tiêu diệt giúp nhận 15 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy1.png) : HP = 3, Speed = 4, tiêu diệt giúp nhận thêm HP.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy2.png) : HP = 5, Speed = 4, tiêu diệt giúp nhận 10 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy3.png) : HP = 2, Speed = 5, tiêu diệt giúp nhận 5 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/eagle4.png) : HP = 3, Speed = 4, tiêu diệt giúp nhận 15 điểm.
+
+- Khi bị phát hiện quái sẽ đuổi theo và tấn công bạn. Khi hết HP bạn sẽ thua nên hãy cẩn thận lượng HP của mình !!!
 
 ### *Hướng dẫn chơi*
 
@@ -61,3 +63,36 @@
     + Sử dụng nút D để di chuyển sang phải.
     + Sử dụng nút W hoặc Space để nhảy lên.
     + Sử dụng nút J để tấn công.
+
+### *Các tính năng của Game*
+
+- Tắt/bật nhạc nền ( music ) và hiệu ứng âm thanh ( sound ).
+
+- Tắt/bật chế độ toàn màn hình.
+
+- Tính điểm và lưu lại điểm cao nhất kể cả khi đã tắt game.
+
+- Khi thua có thể chọn thử lại luôn.
+
+## **Các kỹ thuật sử dụng trong Game**
+
+- Kĩ thuật tách file.
+
+- Xây dựng và xử lý va chạm với Tile Map.
+
+- Xây dựng các class, object. Sử dụng lớp kế thừa, quản lý và liên kết các object.
+
+- Xử lý đồ họa, tương tác âm thanh và chuyển động của các object( player, enemy... ).
+
+- Sử dụng phương pháp tính lerp ( nội suy tuyến tính ) đối với camera;
+
+- Kỹ thuật nối các Map với nhau. Do đó xây dựng được Map dài vô tận: *Trong 1 thời điểm chỉ có 3 Map trong hàng chờ, di chuyển tới đâu render tới đó.*
+
+- Đối với các đối tượng quái trên mặt đất *Enemy*:
+    + Tự động di chuyển và đuổi theo khi người chơi đến gần.
+    + Luôn tính toán xem có thể di chuyển được không. Từ đó tránh tình trạng tự lao xuống vực hay cắm mặt vào tường.
+
+- Đối với đối tượng quái bay *Eagle*:
+    + Sử dụng thuật toán ngoài chương trình: *Tìm đường đi ngắn nhất A-Star ( Xử lý theo BFS )* để đuổi theo người chơi.
+
+- Clean code, xử lý tối ưu không xuất hiện tình trạng tràn Ram.
