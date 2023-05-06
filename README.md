@@ -4,7 +4,7 @@
 
 + Họ và Tên: Trần Đức Lương
 
-+ Mã sinh viên: 22021148
++ Mã sinh viên: 22021148    Lớp: K67-CB.
 
 + Bài tập lớn: **Game Where's Gnuol** / INT2215 N1 - Lập trình nâng cao.
 
@@ -32,11 +32,13 @@
 
 - Cuối cùng, mở project ( giải nén file nếu cần ) và click vào file *Where'sGnuol.exe* để chạy Game ( quá trình này có thế mất 10-30 giây ).
 
+- Nếu không thế chạy game hãy liên hệ qua Email: *luong8076@gmail.com*
+
 ## **Mô tả Game**
 
 ### *Câu chuyện*
 
-- 
+   *Nhân vật chính và Gnuol là 2 người bạn thân. Một ngày Gnuol bị một thế lực bí ẩn bắt, nhân vật chính của chúng ta quyết định tấn công vào lâu đài - nơi sào huyệt của thế lực kia để giải cứu người bạn của mình. Tại đây, anh ta sẽ đối mặt với nhiều thử thách và nguy hiểm khác nhau, bao gồm chạm trán với các kẻ thù cố gắng ngăn cản anh ta tìm kiếm Gnuol. Liệu nhân vật chính của ta có thành công ? Where's Gnuol !?.*
 
 ### *Luật chơi*
 
@@ -80,7 +82,7 @@
 
 - Xây dựng các class, object. Sử dụng lớp kế thừa, quản lý và liên kết các object.
 
-- Xử lý đồ họa, tương tác âm thanh và chuyển động của các object( player, enemy... ).
+- Xử lý đồ họa, tương tác âm thanh và chuyển động của các object( Player, Enemy... ).
 
 - Sử dụng phương pháp tính lerp ( nội suy tuyến tính ) đối với camera;
 
@@ -111,9 +113,9 @@
 
 - Toàn bộ code là do em tự tham khảo và tìm hiểu để thực hiện.
 
-- Biết cách xây dựng thuật toán tìm đường đi ngắn và sử dụng Tile Map.
+- Biết cách xây dựng thuật toán tìm đường đi ngắn, sử dụng Tile Map, cách 1 game hoạt động...
 
-- Học được cách quản lý file, sử dụng github, kỹ năng debug, ...
+- Học được cách quản lý file, sử dụng github, kỹ năng debug, tạo MakeFile và README ...
 
 ### *Hạn chế*
 
@@ -123,8 +125,8 @@
 
 - Xây dựng thêm các đối tượng boss và item hỗ trợ trong game ...
 
-- Xây dựng chế độ đánh theo màn, có thể chọn độ khó cho game.
+- Xây dựng chế độ đánh theo màn, chế độ giới hạn thời gian, có thể chọn độ khó cho game.
 
 - Phát triển thêm cho 2 người có thể cùng chơi với nhau.
 
-** Cảm ơn thầy và các bạn đã đọc và chơi game. Nếu có đóng góp hay tìm hiểu thêm thông tin hãy liên hệ qua Email: luong8076@gmail.com **
+ *Cảm ơn thầy và các bạn đã đọc và chơi game. Nếu có đóng góp hay tìm hiểu thêm thông tin hãy liên hệ qua Email: luong8076@gmail.com*
