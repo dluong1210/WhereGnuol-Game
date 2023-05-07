@@ -78,6 +78,7 @@ public:
     void playMusic();
     void resetGame();
     void handleInputGame( SDL_Event& e );
+    void clearMedia();
 
     void runGame( SDL_Event& e);
     bool isRunning() { return menu->isRunning() || runningGame; }

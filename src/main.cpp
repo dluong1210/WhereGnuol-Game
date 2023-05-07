@@ -18,6 +18,7 @@ int main( int argc, char* argv[] )
             }
         }
     }
+    mainGame.clearMedia();
     func::destroyAll();
     return 0;
 }

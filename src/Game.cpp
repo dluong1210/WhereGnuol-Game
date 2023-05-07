@@ -96,11 +96,11 @@ bool Game::loadMedia()
 
 bool Game::loadMap()
 {
-    map_enemy Map1( "src/Map/mapTest.map", {5}, {200} );
+    map_enemy Map1( "src/Map/map1.map", {100, 80}, {200}, 1 );
     totalMap.push_back( Map1 );
-    map_enemy Map2( "src/Map/map2.map", {5, 15}, {150} );
+    map_enemy Map2( "src/Map/map2.map", {191, 412, 422, 433}, {154, 302}, 2 );
     totalMap.push_back( Map2 );
-    map_enemy Map3( "src/Map/map2.map", {5, 15, 20}, {100} );
+    map_enemy Map3( "src/Map/map3.map", {183, 188, 387, 392}, {140, 166}, 3 );
     totalMap.push_back( Map3 );
     return true;
 }
@@ -121,7 +121,7 @@ bool Game::createMap()
     for( int i=0 ; i<3 ; i++){
         int random = rand() % totalMap.size();
         random = i;
-        gameMap Map( i*MAP_WIDTH*TILE_SIZE, totalMap[random].path, tileSet, random );
+        gameMap Map( i*MAP_WIDTH*TILE_SIZE, totalMap[random].path, tileSet, totalMap[random].STT );
         Map.setEnemyList( totalMap[random].enemy_pos );
         Map.setEagleList( totalMap[random].eagle_pos );
         listM.push_back( Map );
@@ -135,7 +135,7 @@ bool Game::createMap()
 
 bool Game::createPlayer()
 {
-    player = new Player( 64, 128, playerTex, p_sfx );
+    player = new Player( 2264, 128, playerTex, p_sfx );
     if( player == nullptr ) return false;
     return true;
 }
@@ -145,7 +145,7 @@ bool Game::createEnemy()
     for( int i=0 ; i<listM.size() ; i++){
         for( int j=0 ; j<listM[i].getEnemyList().size() ; j++ ){
             int random = rand() % 3;
-            Enemy* enm = new Enemy( listM[i].getEnemyList()[j]*TILE_SIZE + listM[i].getStart_x(), 128, enemyTex[random], listM[i], random );
+            Enemy* enm = new Enemy( (listM[i].getEnemyList()[j]%MAP_WIDTH)*TILE_SIZE + listM[i].getStart_x(), (listM[i].getEnemyList()[j]/MAP_WIDTH)*TILE_SIZE, enemyTex[random], listM[i], random );
             enemyList.push_back( enm );
         }
     }
@@ -167,7 +167,7 @@ void Game::update_Game()
     if( updateMap() ){
         for( int j=0 ; j<listM[2].getEnemyList().size() ; j++ ){
             int random = rand() % 3;
-            Enemy* enm = new Enemy( listM[2].getEnemyList()[j]*TILE_SIZE + listM[2].getStart_x(), 128, enemyTex[random], listM[2], random );
+            Enemy* enm = new Enemy( (listM[2].getEnemyList()[j]%MAP_WIDTH)*TILE_SIZE + listM[2].getStart_x(), (listM[2].getEnemyList()[j]/MAP_WIDTH)*TILE_SIZE, enemyTex[random], listM[2], random );
             enemyList.push_back( enm );
         }
         for( int j=0 ; j<listM[2].getEagleList().size() ; j++ ){
@@ -195,12 +195,13 @@ bool Game::updateMap()
         listM.pop_front();
 
         int randomMap ;
-        randomMap = rand()%2;
-//        while( totalMap[randomMap].checkRepeat(listM[0]) || totalMap[randomMap].checkRepeat(listM[1]) ){
-//            randomMap = std::rand()%totalMap.size()-1;
-//        }
-//        std::cout << randomMap << std::endl;
-        gameMap Map( listM[1].getStart_x() + TILE_SIZE*MAP_WIDTH, totalMap[randomMap].path, tileSet, randomMap );
+        randomMap = rand()%totalMap.size();
+        while( (totalMap[randomMap].STT == listM[0].getSTT()) || (totalMap[randomMap].STT == listM[1].getSTT()) ){
+           randomMap = rand()%totalMap.size();
+        }
+        std::cout << "Update Map number: " << randomMap << std::endl;
+
+        gameMap Map( listM[1].getStart_x() + TILE_SIZE*MAP_WIDTH, totalMap[randomMap].path, tileSet, totalMap[randomMap].STT );
         Map.setEnemyList( totalMap[randomMap].enemy_pos );
         Map.setEagleList( totalMap[randomMap].eagle_pos );
         listM.push_back( Map );
@@ -411,4 +412,23 @@ void Game::runGame( SDL_Event& e )
         resetGame();
     }
     func::renderPresent();
+}
+
+void Game::clearMedia()
+{
+    SDL_DestroyTexture( tileSet );
+    SDL_DestroyTexture( liveBar );
+    SDL_DestroyTexture( heart );
+    SDL_DestroyTexture( eagleTex );
+    for( int i=0 ; i<7 ; i++ ) SDL_DestroyTexture( playerTex[i] );
+    for( int i=0 ; i<3 ; i++ ) SDL_DestroyTexture( enemyTex[i] );
+    for( int i=0 ; i<15 ; i++) SDL_DestroyTexture( menuTex[i] );
+
+    for( int i=0 ; i<5 ; i++) Mix_FreeChunk( p_sfx[i] );
+    for( int i=0 ; i<2 ; i++ ) Mix_FreeChunk( menuSfx[i] );
+    Mix_FreeChunk( eagle_sfx );
+    Mix_FreeMusic( menuMus );
+    Mix_FreeMusic( gameMus );
+
+    TTF_CloseFont( font );
 }

@@ -38,6 +38,7 @@ void Player::updatePlayer( std::deque<gameMap>& listM, std::vector<Enemy*>& enem
     if( y > MAP_HEIGHT*64 +128 && !die ){
         die = true;
         countDead = 6*24;
+        Mix_PlayChannel( -1, p_sfx[dead], 0);
     }
 }
 
@@ -195,12 +196,17 @@ void Player::changeCam( SDL_Rect& camera, std::deque<gameMap>& listM )
     if( cam_target_x < listM[index_mapP].getStart_x() && index_mapP == 0 ) {
         cam_target_x = listM[index_mapP].getStart_x();
     }
-    if( cam_target_y < 0 ) {
-        cam_target_y = 0;
+    if( cam_target_y < 0.5*TILE_SIZE ) {
+        cam_target_y = 0.5*TILE_SIZE;
     }
-    else if( cam_target_y > 64*MAP_HEIGHT - HEIGHT ) {
-        cam_target_y = 64*MAP_HEIGHT - HEIGHT;
+    else if( cam_target_y > 64*MAP_HEIGHT - HEIGHT - 0.5*TILE_SIZE ) {
+        cam_target_y = 64*MAP_HEIGHT - HEIGHT - 0.5*TILE_SIZE;
     }
+    if( hurting && countHurt < 18 ){
+        cam_target_x += rand() % 51 - 25;
+        cam_target_y += rand() % 51 - 25;
+    }
+
 
     // Áp dụng smoothing bằng cách sử dụng lerp
     float smoothing = 0.1; // Điều chỉnh độ mượt của camera, có thể thay đổi
@@ -256,7 +262,7 @@ void Player::renderPlayer( SDL_Rect& camera )
         else countIdle=0;
 
         if( die ){
-            if( (countDead+1)/6 >= DIE_FRAMES ) die = false;
+            if( (countDead+1)/6 >= DIE_FRAMES ) Mix_HaltChannel( -1 );
             countDead++;
             func::renderTextureFlip(p_texture[dead], &animationPlayer[countDead/6], &str, flip );
         }

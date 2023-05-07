@@ -238,7 +238,10 @@ void func::setWindowFScr()
     SDL_SetWindowFullscreen( window, SDL_WINDOW_FULLSCREEN ); 
 }
 
-void func::quitWindowFScr() { SDL_SetWindowFullscreen( window, 0 ); }
+void func::quitWindowFScr()
+{
+    SDL_SetWindowFullscreen( window, 0 );
+} 
 
 void func::handleQuit()
 {

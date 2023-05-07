@@ -28,7 +28,7 @@ Enemy::Enemy( const int& _x, const int& _y, SDL_Texture* image, gameMap& _map, i
 
     if( type == 0 ) HP = 3;
     else if( type == 1 ) HP = 5;
-    else { HP = 2; E_SPEED = 5; }
+    else HP = 2;
 }
 
 void Enemy::moveToPlayer( Player& _player ){

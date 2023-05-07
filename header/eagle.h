@@ -34,7 +34,7 @@ private:
     SDL_Rect animationFly[FLY_FRAMES];
     SDL_Rect animationDie[DIE_FRAMES];
 
-    Mix_Chunk* sfx_eagle = Mix_LoadWAV( "src/Sfx/sfx_Hurt.wav" );
+    Mix_Chunk* sfx_eagle = Mix_LoadWAV( "src/Sfx/sfx_enemy_hurt.wav" );
 
     int countFly = 0, countHit = 0, countHurt = 0, countDie = 0;
     bool flying = true, attacking = false, hurting = false, die = false;

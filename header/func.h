@@ -49,13 +49,15 @@ struct path_pos{
 struct map_enemy
 {
     const char* path;
+    int STT;
     std::vector<int> enemy_pos;
     std::vector<int> eagle_pos;
 
-    map_enemy( const char* _path, std::vector<int> enm, std::vector<int> egl ){
+    map_enemy( const char* _path, std::vector<int> enm, std::vector<int> egl, int _STT ){
         path = _path;
         enemy_pos = enm;
         eagle_pos = egl;
+        STT = _STT;
     }
     const char* getPath() { return path; }
 };
