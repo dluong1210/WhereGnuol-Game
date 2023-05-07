@@ -10,6 +10,8 @@
 
 ## **Hướng dẫn cài đặt Game**
 
+- Nếu bạn chỉ muốn tải và chơi Game hãy tải và giải file đóng gói qua link: *https://drive.google.com/file/d/1Vyse-w-_2tsmjOuoF4kYvpYr3AyEzQvq/view?usp=sharing* và click vào file *Where's Gnuol.exe* là có thể chơi luôn. Còn nếu muốn xem các code hoạt động hãy theo dõi các bước dưới đây:
+
 - *Trước tiên hãy đảm bảo máy tính của bạn đã có thư viện SDL2 ( gồm cả SDL_image, SDL_mixer và SDL_ttf ).*
 
 ### **Cài đặt thư viện SDL**
@@ -45,9 +47,9 @@
 - Người chơi sẽ có HP = 3. Bạn phải cố gắng di chuyển xa và tiêu diệt được nhiều quái để đạt được điểm cao.
 
 - Có 4 loại quái trong game ( 3 con di chuyển trên mặt đất và 1 con bay ) cùng với các thuộc tính:
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy1.png) : HP = 3, Speed = 4, tiêu diệt giúp nhận thêm HP.
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy2.png) : HP = 5, Speed = 4, tiêu diệt giúp nhận 10 điểm.
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy3.png) : HP = 2, Speed = 5, tiêu diệt giúp nhận 5 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy1.png) : HP = 3, tiêu diệt giúp nhận thêm HP.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy2.png) : HP = 5, tiêu diệt giúp nhận 10 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy3.png) : HP = 2, tiêu diệt giúp nhận 5 điểm.
     + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/eagle4.png) : HP = 3, Speed = 4, tiêu diệt giúp nhận 15 điểm.
 
 - Khi bị phát hiện quái sẽ đuổi theo và tấn công bạn. Khi hết HP bạn sẽ thua nên hãy cẩn thận lượng HP của mình !!!
