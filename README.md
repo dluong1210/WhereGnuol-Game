@@ -10,7 +10,7 @@
 
 ## **Hướng dẫn cài đặt Game**
 
-- Nếu bạn chỉ muốn tải và chơi Game hãy tải và giải file đóng gói qua link: *https://drive.google.com/file/d/1Vyse-w-_2tsmjOuoF4kYvpYr3AyEzQvq/view?usp=sharing* và click vào file *Where's Gnuol.exe* là có thể chơi luôn. Còn nếu muốn xem các code hoạt động hãy theo dõi các bước dưới đây:
+***Nếu bạn chỉ muốn tải và chơi Game hãy tải và giải nén file đóng gói qua link: *https://drive.google.com/file/d/1Vyse-w-_2tsmjOuoF4kYvpYr3AyEzQvq/view?usp=sharing* và click vào file *Where's Gnuol.exe* là có thể chơi luôn. Còn nếu muốn xem các code hoạt động hãy theo dõi các bước dưới đây:***
 
 - *Trước tiên hãy đảm bảo máy tính của bạn đã có thư viện SDL2 ( gồm cả SDL_image, SDL_mixer và SDL_ttf ).*
 
