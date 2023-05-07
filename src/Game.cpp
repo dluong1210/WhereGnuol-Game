@@ -135,7 +135,7 @@ bool Game::createMap()
 
 bool Game::createPlayer()
 {
-    player = new Player( 2264, 128, playerTex, p_sfx );
+    player = new Player( 64, 128, playerTex, p_sfx );
     if( player == nullptr ) return false;
     return true;
 }
