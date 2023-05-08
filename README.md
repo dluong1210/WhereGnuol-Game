@@ -16,9 +16,11 @@ https://drive.google.com/file/d/1Vyse-w-_2tsmjOuoF4kYvpYr3AyEzQvq/view?usp=shari
 ```
 ***Còn nếu muốn xem các code hoạt động hãy theo dõi các bước dưới đây:***
 
-- *Trước tiên hãy đảm bảo máy tính của bạn đã có thư viện SDL2 ( gồm cả SDL_image, SDL_mixer và SDL_ttf ).*
+- *Trước tiên hãy đảm bảo máy tính của bạn đã có mingW thư viện SDL2 ( gồm cả SDL_image, SDL_mixer và SDL_ttf ).*
 
 ### **Cài đặt thư viện SDL**
+
+- Hướng dẫn cài MingW: https://www.geeksforgeeks.org/installing-mingw-tools-for-c-c-and-changing-environment-variable/
 
 - Hướng dẫn cài SDL: https://lazyfoo.net/tutorials/SDL/01_hello_SDL/index.php
 - Hướng dẫn cài SDL_Image: https://lazyfoo.net/tutorials/SDL/06_extension_libraries_and_loading_other_image_formats/index.php
@@ -36,7 +38,7 @@ https://drive.google.com/file/d/1Vyse-w-_2tsmjOuoF4kYvpYr3AyEzQvq/view?usp=shari
     git clone https://github.com/dluong1210/GameSDL_WheresGnuol.git
 ```
 
-- Cuối cùng, mở project ( giải nén file nếu cần ) và click vào file *Where'sGnuol.exe* để chạy Game ( quá trình này có thế mất 10-30 giây ).
+- Cuối cùng, mở project ( giải nén file nếu cần ) mở cmd gõ câu lệnh *mingw32-make* để tiến hành compile sau đó mở file exe để chạy ( quá trình này có thế mất 10-30 giây ).
 
 - Nếu không thế chạy game hãy liên hệ qua Email: *luong8076@gmail.com*
 
@@ -54,7 +56,7 @@ https://drive.google.com/file/d/1Vyse-w-_2tsmjOuoF4kYvpYr3AyEzQvq/view?usp=shari
     + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy1.png) : HP = 3, tiêu diệt giúp nhận thêm HP.
     + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy2.png) : HP = 5, tiêu diệt giúp nhận 10 điểm.
     + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/enemy3.png) : HP = 2, tiêu diệt giúp nhận 5 điểm.
-    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/eagle4.png) : HP = 3, Speed = 4, tiêu diệt giúp nhận 15 điểm.
+    + ![alt tag](https://github.com/dluong1210/GameSDL_WheresGnuol/blob/master/src/Texture/Enemy/eagle4.png) : HP = 3, tiêu diệt giúp nhận 15 điểm.
 
 - Khi bị phát hiện quái sẽ đuổi theo và tấn công bạn. Khi hết HP bạn sẽ thua nên hãy cẩn thận lượng HP của mình !!!
 
